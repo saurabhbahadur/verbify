@@ -1,11 +1,23 @@
+import {Routes, Route } from "react-router-dom";
+import Home from "./components/Home"
+import Blog from "./components/Blog"
+import About from "./components/About"
+import Navbar from "./components/Navbar";
 
 function App() {
 
   return (
-    <div>
-      <h1 className="text-blue-800" >home</h1>
-      <p>i am home page </p>
+    <>
+        <Navbar/>
+    <div className="p-2">
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/Blog" element={<Blog/>}/>
+        <Route path="/About" element={<About/>}/>
+      </Routes>
     </div>
+    </>
+
   )
 }
 
